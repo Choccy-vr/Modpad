@@ -1,0 +1,5 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "MX_V2-main") (type "KiCad") (uri "/home/gino/Projects/Modpad/PCB/Resources/MX_V2-main") (options "") (descr ""))
+	(lib (name "MX_Solderable") (type "KiCad") (uri "/home/gino/Projects/Modpad/PCB/Resources/MX_V2-main/MX_Solderable.pretty") (options "") (descr ""))
+)

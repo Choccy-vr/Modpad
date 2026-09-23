@@ -4998,7 +4998,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+		(property "Footprint" "MX_Solderable:MX-Solderable-1U"
 			(at 110.49 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -6637,7 +6637,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+		(property "Footprint" "MX_Solderable:MX-Solderable-1U"
 			(at 154.94 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -6951,7 +6951,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+		(property "Footprint" "MX_Solderable:MX-Solderable-1U"
 			(at 110.49 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -7109,7 +7109,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+		(property "Footprint" "MX_Solderable:MX-Solderable-1U"
 			(at 132.08 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -7345,7 +7345,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+		(property "Footprint" "MX_Solderable:MX-Solderable-1U"
 			(at 132.08 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -7904,7 +7904,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+		(property "Footprint" "MX_Solderable:MX-Solderable-1U"
 			(at 154.94 128.27 0)
 			(hide yes)
 			(show_name no)
