@@ -1851,6 +1851,170 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3.3V"
 			(power global)
 			(pin_numbers
@@ -2362,6 +2526,24 @@
 		(uuid "0e563390-468e-42e3-af16-13dc75c615dd")
 	)
 	(junction
+		(at 115.57 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "225ee06a-afac-49ed-b7f9-8d63e71381d7")
+	)
+	(junction
+		(at 160.02 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "23ccd52d-85c7-4f29-977b-8856d7b61cf8")
+	)
+	(junction
+		(at 137.16 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2ffa66cb-7a3d-418c-a20c-79310ddd0a33")
+	)
+	(junction
 		(at 125.73 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2404,36 +2586,12 @@
 		(uuid "eae6d84b-3e8d-49e8-92fc-19541a2e510d")
 	)
 	(no_connect
-		(at 165.1 71.12)
-		(uuid "0dd8c1f5-f717-430f-bc99-a4421e1c35dd")
-	)
-	(no_connect
-		(at 165.1 66.04)
-		(uuid "41840804-786d-4c5f-a7b4-d9ad9ee1b6c2")
-	)
-	(no_connect
 		(at 139.7 63.5)
 		(uuid "46b94a57-9de6-4790-8f90-b6699919209a")
 	)
 	(no_connect
 		(at 139.7 66.04)
 		(uuid "b24693d7-211f-41f8-a094-4f3fe48a8cec")
-	)
-	(no_connect
-		(at 139.7 71.12)
-		(uuid "b74b351a-b42c-4d13-974f-b7122395ee43")
-	)
-	(no_connect
-		(at 165.1 76.2)
-		(uuid "f0ddf1f2-070c-4d57-bea7-ab84ea370a57")
-	)
-	(no_connect
-		(at 165.1 73.66)
-		(uuid "f2adbe7a-2b44-4110-a681-5d81742dfedd")
-	)
-	(no_connect
-		(at 165.1 68.58)
-		(uuid "f2ed695c-dabe-4f91-b1de-6e6a509da0c0")
 	)
 	(wire
 		(pts
@@ -2444,6 +2602,16 @@
 			(type default)
 		)
 		(uuid "033c41f3-3faf-4e59-bc70-f2c1e023192d")
+	)
+	(wire
+		(pts
+			(xy 115.57 133.35) (xy 115.57 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04303c1b-fb2a-4280-b272-1cef96e1a7d5")
 	)
 	(wire
 		(pts
@@ -2464,6 +2632,16 @@
 			(type default)
 		)
 		(uuid "1294ca49-308d-40e7-8d9d-422f1f31240f")
+	)
+	(wire
+		(pts
+			(xy 165.1 66.04) (xy 175.26 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15efa06d-0298-4fbd-9bda-2ead506a71a3")
 	)
 	(wire
 		(pts
@@ -2544,6 +2722,16 @@
 			(type default)
 		)
 		(uuid "45e7334f-02b0-42d2-86f9-a54a0829efd4")
+	)
+	(wire
+		(pts
+			(xy 165.1 76.2) (xy 175.26 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47da1e32-2fe7-48e1-9718-dff80d2d51e8")
 	)
 	(wire
 		(pts
@@ -2637,6 +2825,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 133.35) (xy 137.16 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65a3158b-b7c7-4741-a5f4-133e730db0b6")
+	)
+	(wire
+		(pts
 			(xy 165.1 60.96) (xy 175.26 60.96)
 		)
 		(stroke
@@ -2644,6 +2842,26 @@
 			(type default)
 		)
 		(uuid "65b13d0b-d0d7-408e-99cb-4b1b5ed68286")
+	)
+	(wire
+		(pts
+			(xy 95.25 119.38) (xy 105.41 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66049133-7333-4509-a030-2971876f126b")
+	)
+	(wire
+		(pts
+			(xy 160.02 119.38) (xy 160.02 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a1f8ec9-2c6a-4c5d-adf0-153de31d27a5")
 	)
 	(wire
 		(pts
@@ -2687,6 +2905,26 @@
 	)
 	(wire
 		(pts
+			(xy 133.35 71.12) (xy 139.7 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7329d232-0702-4047-905c-8a7db241da25")
+	)
+	(wire
+		(pts
+			(xy 95.25 133.35) (xy 105.41 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75202921-b693-4729-8f0f-63277997d807")
+	)
+	(wire
+		(pts
 			(xy 34.29 128.27) (xy 44.45 128.27)
 		)
 		(stroke
@@ -2714,6 +2952,16 @@
 			(type default)
 		)
 		(uuid "858c78c2-13bd-4c9a-a85e-5a75396ccc4f")
+	)
+	(wire
+		(pts
+			(xy 165.1 71.12) (xy 175.26 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86790d36-1324-4b4c-8d92-dff1219b1bc7")
 	)
 	(wire
 		(pts
@@ -2797,6 +3045,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 119.38) (xy 149.86 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a22d1094-02d0-42e9-a4d1-fdf9c5ea4a18")
+	)
+	(wire
+		(pts
 			(xy 152.4 88.9) (xy 152.4 92.71)
 		)
 		(stroke
@@ -2837,6 +3095,26 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 73.66) (xy 175.26 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae2f1568-532a-408c-8528-450c45c86e17")
+	)
+	(wire
+		(pts
+			(xy 124.46 119.38) (xy 127 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b996b517-d6e9-4dd2-9fea-a9f47dfa63bc")
+	)
+	(wire
+		(pts
 			(xy 46.99 26.67) (xy 50.8 26.67)
 		)
 		(stroke
@@ -2854,6 +3132,26 @@
 			(type default)
 		)
 		(uuid "bd1a318c-abbf-4678-8b73-d8efb69046d0")
+	)
+	(wire
+		(pts
+			(xy 137.16 119.38) (xy 137.16 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c67e0e82-67a6-4cc2-b76e-4ff54d06f210")
+	)
+	(wire
+		(pts
+			(xy 125.73 133.35) (xy 127 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb4f5fd3-b18e-4ff4-af6b-f2ba2a6a4182")
 	)
 	(wire
 		(pts
@@ -2884,6 +3182,26 @@
 			(type default)
 		)
 		(uuid "d2e9e67f-5f37-49d4-bae8-6f10f5cd9d1c")
+	)
+	(wire
+		(pts
+			(xy 115.57 119.38) (xy 115.57 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7c749db-687c-4336-9b9e-76d94fdf397d")
+	)
+	(wire
+		(pts
+			(xy 147.32 133.35) (xy 149.86 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8b88fea-e0c0-4ae5-b2ac-665ea37f948d")
 	)
 	(wire
 		(pts
@@ -2924,6 +3242,16 @@
 			(type default)
 		)
 		(uuid "e7a8bd38-b5dd-4b57-ab78-3a47f0422fd0")
+	)
+	(wire
+		(pts
+			(xy 160.02 133.35) (xy 160.02 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee3a4ac6-0822-481f-b23e-4c2bfe4c218d")
 	)
 	(wire
 		(pts
@@ -2974,6 +3302,16 @@
 			(type default)
 		)
 		(uuid "f9c530fe-d19f-4691-9e1f-ae5a40f1584d")
+	)
+	(wire
+		(pts
+			(xy 165.1 68.58) (xy 175.26 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fac51695-fb05-457d-a2cb-b028fe54f067")
 	)
 	(wire
 		(pts
@@ -3135,6 +3473,54 @@
 			)
 		)
 	)
+	(global_label "PA11"
+		(shape input)
+		(at 95.25 119.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1527ae1b-f1e4-4634-a8b5-d0ec7b6234f6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 87.4872 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "PA11"
+		(shape input)
+		(at 175.26 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1719f651-5011-4d53-ab69-f2c7c978923d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 183.0228 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "INT"
 		(shape input)
 		(at 175.26 63.5 0)
@@ -3231,6 +3617,78 @@
 			)
 		)
 	)
+	(global_label "PA6"
+		(shape input)
+		(at 175.26 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "42bf9e04-0761-4fcf-8bef-bfc581e47e02")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 181.8133 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "PA5"
+		(shape input)
+		(at 147.32 119.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "49cff1f3-fe50-4181-8f3a-d34d6de0fb15")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 140.7667 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "PA7"
+		(shape input)
+		(at 175.26 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4aa6046f-7a96-40da-959e-c4498a5076bf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 181.8133 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "SCL"
 		(shape input)
 		(at 175.26 53.34 0)
@@ -3268,6 +3726,54 @@
 		(uuid "5f84a6cf-f391-4f6f-b3dd-6a46c6057f9f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 260.3114 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "PB1"
+		(shape input)
+		(at 125.73 133.35 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "665717c9-a12c-430f-bb49-124803a5ca13")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.9953 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "PA5"
+		(shape input)
+		(at 175.26 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6f3c7f0f-104c-460a-b560-69ca1c4d43a4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 181.8133 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3375,6 +3881,30 @@
 			)
 		)
 	)
+	(global_label "PA12"
+		(shape input)
+		(at 175.26 76.2 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "94205806-d09a-43c4-b686-4d183c3886c1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 183.0228 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "INT"
 		(shape input)
 		(at 44.45 162.56 0)
@@ -3396,6 +3926,54 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "PA12"
+		(shape input)
+		(at 95.25 133.35 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9df97788-0d80-49bf-9167-3a12e7d52c75")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 87.4872 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "PA7"
+		(shape input)
+		(at 124.46 119.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a810d050-08d4-40fb-95af-e2a504b403c3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.9067 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -3543,6 +4121,54 @@
 			)
 		)
 	)
+	(global_label "PA6"
+		(shape input)
+		(at 147.32 133.35 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e672cbb0-8b53-46ca-ba6c-d95e0b120bde")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 140.7667 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "PB1"
+		(shape input)
+		(at 133.35 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ef0b9648-36e9-4ec4-8240-86db2ff9f678")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 126.6153 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "INT"
 		(shape input)
 		(at 44.45 69.85 0)
@@ -3637,7 +4263,7 @@
 			(uuid "8e7e9243-c7d7-4589-9e9c-197f4e5d73ed")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR017")
 					(unit 1)
@@ -3715,7 +4341,7 @@
 			(uuid "bc96e128-bf46-4eb3-88eb-f793d03343b1")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR013")
 					(unit 1)
@@ -3794,7 +4420,7 @@
 			(uuid "e71b40c5-a582-4fc0-9600-e3e89af7d099")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR011")
 					(unit 1)
@@ -3873,7 +4499,7 @@
 			(uuid "45d51945-d6eb-4add-abcc-30dd75664190")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR09")
 					(unit 1)
@@ -3951,7 +4577,7 @@
 			(uuid "4998a962-c90a-4fb7-bf1a-5739b46fc989")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR018")
 					(unit 1)
@@ -4087,7 +4713,7 @@
 			(uuid "bab6c4ad-ff2b-4e59-b99b-de5be0a4dc0e")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "U1")
 					(unit 1)
@@ -4165,7 +4791,7 @@
 			(uuid "bd0d3001-c4cf-4fa1-a405-8fdf60c9491d")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR022")
 					(unit 1)
@@ -4243,7 +4869,7 @@
 			(uuid "c21a1fc4-832d-4f48-8e47-b62eae39f5e6")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR020")
 					(unit 1)
@@ -4332,9 +4958,89 @@
 			(uuid "1a976aa4-ed93-4084-b6cb-af34f734fe13")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 110.49 133.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "28c60452-0fd8-402a-8788-512caa007714")
+		(property "Reference" "SW4"
+			(at 110.49 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 110.49 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+			(at 110.49 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 110.49 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8dec5c32-a591-49b4-b295-a711dbd21f03")
+		)
+		(pin "2"
+			(uuid "118e0236-1bbb-4d9b-a7bd-c79feffa9ec3")
+		)
+		(instances
+			(project "macro_module"
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "SW4")
 					(unit 1)
 				)
 			)
@@ -4421,7 +5127,7 @@
 			(uuid "3bda897a-5a2c-4e20-92ff-c6f6a9aedaae")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J5")
 					(unit 1)
@@ -4501,7 +5207,7 @@
 			(uuid "dd2717e1-4f70-469c-a9c2-02e5ab94dbb9")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "JP1")
 					(unit 1)
@@ -4579,7 +5285,7 @@
 			(uuid "dfd1adbe-0f5a-4ed6-b52b-1eb00371eaa9")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR02")
 					(unit 1)
@@ -4657,7 +5363,7 @@
 			(uuid "a9bf0c13-0f5c-4b3a-83d9-ff407e8befc0")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR023")
 					(unit 1)
@@ -4739,7 +5445,7 @@
 			(uuid "b2df24da-e62c-4bf5-8fcc-e1e6e5797e5a")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "R1")
 					(unit 1)
@@ -4817,7 +5523,7 @@
 			(uuid "96988d41-133a-4973-9b1d-dff3a5974444")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR06")
 					(unit 1)
@@ -4895,7 +5601,7 @@
 			(uuid "3e466cd6-f0e2-4b98-aba6-2c52b895bf0d")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR015")
 					(unit 1)
@@ -4984,7 +5690,7 @@
 			(uuid "8c790cfa-c5b2-4f2a-bb43-8b4fedc15034")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J3")
 					(unit 1)
@@ -5064,7 +5770,7 @@
 			(uuid "d2141864-0e65-4f78-8ed5-b6073ac5f07f")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "C1")
 					(unit 1)
@@ -5143,9 +5849,87 @@
 			(uuid "7e43a300-2b58-4524-a74c-929cb2187e82")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 115.57 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "70109d86-ccb9-421f-b48f-649c0972ddd0")
+		(property "Reference" "#PWR024"
+			(at 115.57 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 115.57 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 115.57 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6ff86d76-3e46-421c-a76d-1afc1c893d09")
+		)
+		(instances
+			(project "macro_module"
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -5225,9 +6009,87 @@
 			(uuid "55246560-0679-441c-9f3e-8bfa51ede6c7")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7bdac07e-53ac-49f6-a49b-13e5506eeadd")
+		(property "Reference" "#PWR025"
+			(at 137.16 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 137.16 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5d5b2814-a612-4a81-94db-1d68731be60a")
+		)
+		(instances
+			(project "macro_module"
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -5329,7 +6191,7 @@
 			(uuid "a206d03b-4320-42c7-8ef8-4c45e397b653")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J1")
 					(unit 1)
@@ -5407,7 +6269,7 @@
 			(uuid "dcd04853-93b7-446d-a876-ea5ef965a254")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR014")
 					(unit 1)
@@ -5486,7 +6348,7 @@
 			(uuid "2acf9477-d96c-48c1-9584-ff8cd14fb15f")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR08")
 					(unit 1)
@@ -5575,9 +6437,87 @@
 			(uuid "a683ded5-c536-4322-8f24-865ffc6b6c71")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 160.02 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "93979655-5eb4-4366-988f-4b4f450c79e1")
+		(property "Reference" "#PWR026"
+			(at 160.02 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 160.02 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9b6d3c0e-a37a-4b98-a0c0-2acf5f9e08d8")
+		)
+		(instances
+			(project "macro_module"
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -5657,9 +6597,89 @@
 			(uuid "11889dc1-20d2-45ec-9b72-accaf9cd0750")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 154.94 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9bad5fb0-dfc0-4868-876b-3073c818809a")
+		(property "Reference" "SW3"
+			(at 154.94 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 154.94 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+			(at 154.94 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 154.94 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c2bd7046-9061-43b2-b20e-1e3309f82dc1")
+		)
+		(pin "2"
+			(uuid "98bd9dd1-6f73-4444-b7f1-46e73bfa8fd0")
+		)
+		(instances
+			(project "macro_module"
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "SW3")
 					(unit 1)
 				)
 			)
@@ -5735,7 +6755,7 @@
 			(uuid "2f0b1f5f-26cd-47a4-8f08-6d541f9191ed")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR04")
 					(unit 1)
@@ -5813,7 +6833,7 @@
 			(uuid "df1bd148-4d21-4a40-b86e-6eb7c31e2573")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR01")
 					(unit 1)
@@ -5891,9 +6911,89 @@
 			(uuid "b32e1112-67cf-49ad-8a27-af58c6762aba")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 110.49 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "be4144fd-04e0-4b6c-96ed-d6ea52b5fac9")
+		(property "Reference" "SW1"
+			(at 110.49 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 110.49 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+			(at 110.49 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 110.49 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f9aae41f-0925-4653-a60e-d91ccacb2bfa")
+		)
+		(pin "2"
+			(uuid "7188a8d9-2c8e-409e-b0e6-d94fd1522cf0")
+		)
+		(instances
+			(project "macro_module"
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -5969,9 +7069,89 @@
 			(uuid "4862fe3e-efc4-49da-9380-72403d7c7cb2")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 132.08 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c457a5e2-330b-4a1c-9079-557df5df79f0")
+		(property "Reference" "SW2"
+			(at 132.08 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 132.08 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+			(at 132.08 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 132.08 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9dacd2e9-1e67-4844-ac0f-14cc9e82582d")
+		)
+		(pin "2"
+			(uuid "6eaa435c-81a7-49d5-8b38-0cc01580fb88")
+		)
+		(instances
+			(project "macro_module"
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -6047,7 +7227,7 @@
 			(uuid "cbf7b5d3-8248-4bb8-a8a2-d01c6ef4f478")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR05")
 					(unit 1)
@@ -6125,9 +7305,89 @@
 			(uuid "6112782a-613b-4efa-b108-3f8dbe7fb3a1")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 132.08 133.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ccd253f8-6b17-44f9-b051-f11fde64273c")
+		(property "Reference" "SW5"
+			(at 132.08 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 132.08 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+			(at 132.08 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 132.08 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "514b388e-0a24-4ca6-bf48-ab9bc4ec7fcd")
+		)
+		(pin "2"
+			(uuid "8e45b34b-c4c8-4f0a-ae68-f7353ea81cec")
+		)
+		(instances
+			(project "macro_module"
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "SW5")
 					(unit 1)
 				)
 			)
@@ -6209,7 +7469,7 @@
 			(uuid "b34c8362-f21c-40b2-aee9-e8a1ee384da6")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "U2")
 					(unit 1)
@@ -6287,7 +7547,7 @@
 			(uuid "4febd49c-ac9f-4dad-9596-0ad56b564438")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR021")
 					(unit 1)
@@ -6366,7 +7626,7 @@
 			(uuid "762b0529-ab6b-48b0-ada3-ec33077bd16c")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "JP2")
 					(unit 1)
@@ -6444,7 +7704,7 @@
 			(uuid "4b2e251f-32a0-46d9-b88b-1741d08f6036")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR016")
 					(unit 1)
@@ -6526,7 +7786,7 @@
 			(uuid "0f2a8979-ebc6-4977-bc48-b642e67475f7")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "C4")
 					(unit 1)
@@ -6604,9 +7864,89 @@
 			(uuid "dca0ef3a-77fa-4895-bd02-4cb9cfc72b8a")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "macro_module"
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 154.94 133.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fcb19e90-7022-4db6-8b18-2b0f6fb816f9")
+		(property "Reference" "SW6"
+			(at 154.94 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 154.94 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB"
+			(at 154.94 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 154.94 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f732c9b3-aa53-4a41-a8b1-b0de0cb9da5b")
+		)
+		(pin "2"
+			(uuid "4c3dc553-2ead-4129-92b2-39d7e5ab5a44")
+		)
+		(instances
+			(project "macro_module"
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "SW6")
 					(unit 1)
 				)
 			)

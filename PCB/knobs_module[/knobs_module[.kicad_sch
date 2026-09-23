@@ -994,6 +994,428 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:RotaryEncoder_Switch_MP"
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "RotaryEncoder_Switch_MP"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -3.81 4.064 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch and MP Pin"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "rotary switch encoder switch push button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "RotaryEncoder*Switch*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RotaryEncoder_Switch_MP_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 2.54) (xy -3.81 2.54) (xy -3.81 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 0) (xy -3.81 0) (xy -3.81 -1.016) (xy -3.302 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -2.54) (xy -3.81 -2.54) (xy -3.81 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.318 0) (xy -3.81 0) (xy -3.81 1.016) (xy -3.302 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.81 0)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.778) (xy -0.635 1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -0.381 0)
+					(radius 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.381 -1.778) (xy -0.381 1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.381 -2.794)
+					(mid -3.0988 -0.0635)
+					(end -0.381 2.667)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.127 1.778) (xy -0.127 -1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 2.921) (xy -0.508 2.667) (xy 0.127 2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 -3.048) (xy -0.508 -2.794) (xy 0.127 -2.413)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 1.016) (xy 3.81 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0) (xy 3.429 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 4.318 1.016)
+					(radius 0.127)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 4.318 -1.016)
+					(radius 0.127)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 4.318 2.54) (xy 4.318 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 4.318 -2.54) (xy 4.318 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RotaryEncoder_Switch_MP_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "S1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "S2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Jumper:SolderJumper_2_Open"
 			(pin_numbers
 				(hide yes)
@@ -2404,24 +2826,28 @@
 		(uuid "eae6d84b-3e8d-49e8-92fc-19541a2e510d")
 	)
 	(no_connect
-		(at 165.1 71.12)
-		(uuid "0dd8c1f5-f717-430f-bc99-a4421e1c35dd")
-	)
-	(no_connect
-		(at 165.1 66.04)
-		(uuid "41840804-786d-4c5f-a7b4-d9ad9ee1b6c2")
+		(at 118.11 129.54)
+		(uuid "2d10798d-3bc8-4f09-b840-862260b6d179")
 	)
 	(no_connect
 		(at 139.7 63.5)
 		(uuid "46b94a57-9de6-4790-8f90-b6699919209a")
 	)
 	(no_connect
+		(at 158.75 129.54)
+		(uuid "982c9584-f534-43d8-b133-c382c24f5db9")
+	)
+	(no_connect
 		(at 139.7 66.04)
 		(uuid "b24693d7-211f-41f8-a094-4f3fe48a8cec")
 	)
 	(no_connect
-		(at 139.7 71.12)
-		(uuid "b74b351a-b42c-4d13-974f-b7122395ee43")
+		(at 158.75 134.62)
+		(uuid "dee1b2e8-48fd-403e-9bad-6dd24746b7de")
+	)
+	(no_connect
+		(at 118.11 134.62)
+		(uuid "df58222d-72b8-4551-b951-883a2842dfb6")
 	)
 	(no_connect
 		(at 165.1 76.2)
@@ -2430,10 +2856,6 @@
 	(no_connect
 		(at 165.1 73.66)
 		(uuid "f2adbe7a-2b44-4110-a681-5d81742dfedd")
-	)
-	(no_connect
-		(at 165.1 68.58)
-		(uuid "f2ed695c-dabe-4f91-b1de-6e6a509da0c0")
 	)
 	(wire
 		(pts
@@ -2454,6 +2876,26 @@
 			(type default)
 		)
 		(uuid "0515f935-72a6-4376-9419-961412c984b2")
+	)
+	(wire
+		(pts
+			(xy 138.43 134.62) (xy 143.51 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0851b9a4-4536-4722-92f2-3029ffc27ab1")
+	)
+	(wire
+		(pts
+			(xy 165.1 68.58) (xy 175.26 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "127d52e3-c8d8-498b-b6aa-447c3064dc48")
 	)
 	(wire
 		(pts
@@ -2507,6 +2949,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 139.7) (xy 151.13 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25e78537-d19b-405d-a759-fd9d78fa958d")
+	)
+	(wire
+		(pts
 			(xy 165.1 78.74) (xy 175.26 78.74)
 		)
 		(stroke
@@ -2514,6 +2966,26 @@
 			(type default)
 		)
 		(uuid "25f62fd3-fcc1-46f6-8906-486c0e65a418")
+	)
+	(wire
+		(pts
+			(xy 138.43 129.54) (xy 143.51 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27c51d65-ff10-4321-a99c-f2df88def68e")
+	)
+	(wire
+		(pts
+			(xy 165.1 71.12) (xy 175.26 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "308fd243-b8b2-465b-a274-f6111b86ac64")
 	)
 	(wire
 		(pts
@@ -2537,6 +3009,16 @@
 	)
 	(wire
 		(pts
+			(xy 97.79 134.62) (xy 102.87 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4360045f-d999-4157-94b3-2a71bab171aa")
+	)
+	(wire
+		(pts
 			(xy 242.57 36.83) (xy 251.46 36.83)
 		)
 		(stroke
@@ -2544,6 +3026,16 @@
 			(type default)
 		)
 		(uuid "45e7334f-02b0-42d2-86f9-a54a0829efd4")
+	)
+	(wire
+		(pts
+			(xy 138.43 132.08) (xy 143.51 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47a6beba-a4c5-4f5f-a1bf-25765c3adc1d")
 	)
 	(wire
 		(pts
@@ -2574,6 +3066,16 @@
 			(type default)
 		)
 		(uuid "4d4ec103-c56f-4661-bbf7-f1ab89d93121")
+	)
+	(wire
+		(pts
+			(xy 165.1 66.04) (xy 175.26 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50eb57fb-6054-41d5-b5c8-849c81cd38f7")
 	)
 	(wire
 		(pts
@@ -2657,6 +3159,16 @@
 	)
 	(wire
 		(pts
+			(xy 97.79 132.08) (xy 102.87 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70523db0-41d5-41f4-b176-1a5bc28743c8")
+	)
+	(wire
+		(pts
 			(xy 105.41 45.72) (xy 114.3 45.72)
 		)
 		(stroke
@@ -2684,6 +3196,16 @@
 			(type default)
 		)
 		(uuid "72615049-14f3-4526-8c7b-9467fb878616")
+	)
+	(wire
+		(pts
+			(xy 139.7 71.12) (xy 139.7 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "763e5ee2-5c68-4290-b2bc-144af1008786")
 	)
 	(wire
 		(pts
@@ -2744,6 +3266,16 @@
 			(type default)
 		)
 		(uuid "89e2e29c-0781-4448-918c-5219f0b80cb2")
+	)
+	(wire
+		(pts
+			(xy 110.49 139.7) (xy 110.49 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f9791ea-aea0-4fe4-8105-567d8f255bdb")
 	)
 	(wire
 		(pts
@@ -2887,6 +3419,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 77.47) (xy 137.16 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9d1998b-23d1-4c38-8c1d-6151f43de74a")
+	)
+	(wire
+		(pts
 			(xy 34.29 104.14) (xy 44.45 104.14)
 		)
 		(stroke
@@ -2984,6 +3526,16 @@
 			(type default)
 		)
 		(uuid "fb09bebf-7568-489a-9235-157258977496")
+	)
+	(wire
+		(pts
+			(xy 97.79 129.54) (xy 102.87 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb1855f5-5902-48eb-a01c-f62942c55f85")
 	)
 	(wire
 		(pts
@@ -3135,6 +3687,30 @@
 			)
 		)
 	)
+	(global_label "Encoder_1_A"
+		(shape input)
+		(at 175.26 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "18530a89-7cdc-488b-8d07-a537bf96faa1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.0379 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "INT"
 		(shape input)
 		(at 175.26 63.5 0)
@@ -3231,6 +3807,54 @@
 			)
 		)
 	)
+	(global_label "Encoder_1_B"
+		(shape input)
+		(at 97.79 134.62 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3c74a95b-94ae-4a59-86dc-68987a182c87")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 82.8307 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "Encoder_2_B"
+		(shape input)
+		(at 175.26 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "591d37a6-5c79-40e1-b2b8-f815085fc4f5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.2193 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "SCL"
 		(shape input)
 		(at 175.26 53.34 0)
@@ -3255,6 +3879,30 @@
 			)
 		)
 	)
+	(global_label "Encoder_1_A"
+		(shape input)
+		(at 97.79 129.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5ed5a4c8-55bd-41cc-9d3f-f1f185ec3f89")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.0121 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "SWDIO"
 		(shape input)
 		(at 251.46 34.29 0)
@@ -3276,6 +3924,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "Encoder_2_B"
+		(shape input)
+		(at 138.43 134.62 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "604638d0-e533-49e3-9659-55df04174776")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 123.4707 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -3399,6 +4071,30 @@
 			)
 		)
 	)
+	(global_label "Encoder_1_B"
+		(shape input)
+		(at 137.16 77.47 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "99c36807-bc07-4f53-a41f-e848a957f993")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 122.2007 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "SDA"
 		(shape input)
 		(at 44.45 128.27 0)
@@ -3471,6 +4167,30 @@
 			)
 		)
 	)
+	(global_label "Encoder_2_A"
+		(shape input)
+		(at 175.26 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b4710c3d-4dc2-4171-8272-078bcad7e39e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.0379 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "SDA"
 		(shape input)
 		(at 44.45 96.52 0)
@@ -3516,6 +4236,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "Encoder_2_A"
+		(shape input)
+		(at 138.43 129.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c3d8db7c-9b26-4715-ac9f-24232e7a31ec")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 123.6521 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -3637,7 +4381,7 @@
 			(uuid "8e7e9243-c7d7-4589-9e9c-197f4e5d73ed")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR017")
 					(unit 1)
@@ -3715,7 +4459,7 @@
 			(uuid "bc96e128-bf46-4eb3-88eb-f793d03343b1")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR013")
 					(unit 1)
@@ -3794,7 +4538,7 @@
 			(uuid "e71b40c5-a582-4fc0-9600-e3e89af7d099")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR011")
 					(unit 1)
@@ -3873,7 +4617,7 @@
 			(uuid "45d51945-d6eb-4add-abcc-30dd75664190")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR09")
 					(unit 1)
@@ -3951,7 +4695,7 @@
 			(uuid "4998a962-c90a-4fb7-bf1a-5739b46fc989")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR018")
 					(unit 1)
@@ -4087,7 +4831,7 @@
 			(uuid "bab6c4ad-ff2b-4e59-b99b-de5be0a4dc0e")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "U1")
 					(unit 1)
@@ -4165,7 +4909,7 @@
 			(uuid "bd0d3001-c4cf-4fa1-a405-8fdf60c9491d")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR022")
 					(unit 1)
@@ -4243,7 +4987,7 @@
 			(uuid "c21a1fc4-832d-4f48-8e47-b62eae39f5e6")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR020")
 					(unit 1)
@@ -4332,7 +5076,7 @@
 			(uuid "1a976aa4-ed93-4084-b6cb-af34f734fe13")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J4")
 					(unit 1)
@@ -4421,7 +5165,7 @@
 			(uuid "3bda897a-5a2c-4e20-92ff-c6f6a9aedaae")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J5")
 					(unit 1)
@@ -4501,9 +5245,88 @@
 			(uuid "dd2717e1-4f70-469c-a9c2-02e5ab94dbb9")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 97.79 132.08 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "316d9e48-db64-4c96-9c00-1a01733af08b")
+		(property "Reference" "#PWR027"
+			(at 91.44 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 93.98 132.0799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 97.79 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 97.79 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "07637411-1fb2-4d65-9105-ccefe1d2fdf0")
+		)
+		(instances
+			(project "knobs_module["
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -4579,7 +5402,7 @@
 			(uuid "dfd1adbe-0f5a-4ed6-b52b-1eb00371eaa9")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR02")
 					(unit 1)
@@ -4657,9 +5480,193 @@
 			(uuid "a9bf0c13-0f5c-4b3a-83d9-ff407e8befc0")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:RotaryEncoder_Switch_MP")
+		(at 110.49 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "385e36cf-17a5-4822-ab37-45a2ee33aa47")
+		(property "Reference" "SW1"
+			(at 110.49 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RotaryEncoder_Switch_MP"
+			(at 110.49 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm"
+			(at 106.68 128.016 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch and MP Pin"
+			(at 110.49 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "S1"
+			(uuid "be94f088-a52b-49cc-bead-8ac6d2276def")
+		)
+		(pin "C"
+			(uuid "1ad9874a-e457-4f27-8f79-2a993b38a17b")
+		)
+		(pin "A"
+			(uuid "792dfb1f-1927-494b-9196-b8ed615ee6f3")
+		)
+		(pin "B"
+			(uuid "0558040e-4943-43b7-a80c-7ebb90aa4f05")
+		)
+		(pin "MP"
+			(uuid "019102e0-f7c3-4bcd-b175-0b7a5a61a2ac")
+		)
+		(pin "S2"
+			(uuid "f93ff6a1-4c01-4e5c-9552-30957259fa01")
+		)
+		(instances
+			(project "knobs_module["
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:RotaryEncoder_Switch_MP")
+		(at 151.13 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "42ed0f48-7f88-4137-bebc-32db484d792d")
+		(property "Reference" "SW2"
+			(at 151.13 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RotaryEncoder_Switch_MP"
+			(at 151.13 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm"
+			(at 147.32 128.016 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch and MP Pin"
+			(at 151.13 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "S1"
+			(uuid "a1518b81-7b8e-416f-a867-d5f49d90d417")
+		)
+		(pin "C"
+			(uuid "b4f8ac12-d01c-432f-8bc4-1367b4901efc")
+		)
+		(pin "A"
+			(uuid "76f7a041-166d-4248-a021-ee168ebfd86a")
+		)
+		(pin "B"
+			(uuid "598cff80-2a87-40ac-b5c2-49c3fd502b7b")
+		)
+		(pin "MP"
+			(uuid "b1dff313-5e84-46a6-aba3-eaf9ac1b00af")
+		)
+		(pin "S2"
+			(uuid "e7fc4e72-b4fc-4e2d-bff9-6826937f2dd7")
+		)
+		(instances
+			(project "knobs_module["
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -4739,7 +5746,7 @@
 			(uuid "b2df24da-e62c-4bf5-8fcc-e1e6e5797e5a")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "R1")
 					(unit 1)
@@ -4817,7 +5824,7 @@
 			(uuid "96988d41-133a-4973-9b1d-dff3a5974444")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR06")
 					(unit 1)
@@ -4895,7 +5902,7 @@
 			(uuid "3e466cd6-f0e2-4b98-aba6-2c52b895bf0d")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR015")
 					(unit 1)
@@ -4984,7 +5991,7 @@
 			(uuid "8c790cfa-c5b2-4f2a-bb43-8b4fedc15034")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J3")
 					(unit 1)
@@ -5064,9 +6071,87 @@
 			(uuid "d2141864-0e65-4f78-8ed5-b6073ac5f07f")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 151.13 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f4044ab-67b3-4944-8e19-f6f6a9ef86db")
+		(property "Reference" "#PWR025"
+			(at 151.13 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 151.13 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 151.13 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 151.13 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4361da47-b7c4-46ea-96cd-643587384f4e")
+		)
+		(instances
+			(project "knobs_module["
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -5143,7 +6228,7 @@
 			(uuid "7e43a300-2b58-4524-a74c-929cb2187e82")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR010")
 					(unit 1)
@@ -5225,7 +6310,7 @@
 			(uuid "55246560-0679-441c-9f3e-8bfa51ede6c7")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "C2")
 					(unit 1)
@@ -5329,7 +6414,7 @@
 			(uuid "a206d03b-4320-42c7-8ef8-4c45e397b653")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J1")
 					(unit 1)
@@ -5407,7 +6492,7 @@
 			(uuid "dcd04853-93b7-446d-a876-ea5ef965a254")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR014")
 					(unit 1)
@@ -5486,7 +6571,7 @@
 			(uuid "2acf9477-d96c-48c1-9584-ff8cd14fb15f")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR08")
 					(unit 1)
@@ -5575,7 +6660,7 @@
 			(uuid "a683ded5-c536-4322-8f24-865ffc6b6c71")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "J6")
 					(unit 1)
@@ -5657,9 +6742,88 @@
 			(uuid "11889dc1-20d2-45ec-9b72-accaf9cd0750")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 138.43 132.08 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d6fef0a-d12d-44c2-8f96-6fdbe7c5641a")
+		(property "Reference" "#PWR026"
+			(at 132.08 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 134.62 132.0799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.43 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 138.43 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49e8d1a1-043e-4966-9e3c-ec1613e13748")
+		)
+		(instances
+			(project "knobs_module["
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -5735,7 +6899,7 @@
 			(uuid "2f0b1f5f-26cd-47a4-8f08-6d541f9191ed")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR04")
 					(unit 1)
@@ -5813,7 +6977,7 @@
 			(uuid "df1bd148-4d21-4a40-b86e-6eb7c31e2573")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR01")
 					(unit 1)
@@ -5891,7 +7055,7 @@
 			(uuid "b32e1112-67cf-49ad-8a27-af58c6762aba")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR019")
 					(unit 1)
@@ -5969,7 +7133,7 @@
 			(uuid "4862fe3e-efc4-49da-9380-72403d7c7cb2")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR012")
 					(unit 1)
@@ -6047,7 +7211,7 @@
 			(uuid "cbf7b5d3-8248-4bb8-a8a2-d01c6ef4f478")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR05")
 					(unit 1)
@@ -6125,7 +7289,7 @@
 			(uuid "6112782a-613b-4efa-b108-3f8dbe7fb3a1")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR03")
 					(unit 1)
@@ -6209,9 +7373,87 @@
 			(uuid "b34c8362-f21c-40b2-aee9-e8a1ee384da6")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 110.49 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d956c669-7332-4f48-ad01-9635642098b2")
+		(property "Reference" "#PWR024"
+			(at 110.49 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 110.49 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 110.49 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 110.49 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2d54d76c-ffac-43fd-8422-80345a3f6752")
+		)
+		(instances
+			(project "knobs_module["
+				(path "/7d00e834-df74-460f-9724-511089c47425"
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -6287,7 +7529,7 @@
 			(uuid "4febd49c-ac9f-4dad-9596-0ad56b564438")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR021")
 					(unit 1)
@@ -6366,7 +7608,7 @@
 			(uuid "762b0529-ab6b-48b0-ada3-ec33077bd16c")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "JP2")
 					(unit 1)
@@ -6444,7 +7686,7 @@
 			(uuid "4b2e251f-32a0-46d9-b88b-1741d08f6036")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR016")
 					(unit 1)
@@ -6526,7 +7768,7 @@
 			(uuid "0f2a8979-ebc6-4977-bc48-b642e67475f7")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "C4")
 					(unit 1)
@@ -6604,7 +7846,7 @@
 			(uuid "dca0ef3a-77fa-4895-bd02-4cb9cfc72b8a")
 		)
 		(instances
-			(project "peripheral_module_template"
+			(project "knobs_module["
 				(path "/7d00e834-df74-460f-9724-511089c47425"
 					(reference "#PWR07")
 					(unit 1)
