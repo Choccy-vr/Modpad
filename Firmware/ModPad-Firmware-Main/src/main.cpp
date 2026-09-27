@@ -61,7 +61,7 @@ void loop()
                     ModpadHID::tapConsumer(b.code);
                 else
                     ModpadHID::tapKey(b.code, b.modifiers);
-                ModpadDisplay::displayText(b.code + " was just pressed");
+                ModpadDisplay::displayText(String(b.code) + " was just pressed");
             }
             b.pressed = isPressed;
         }
