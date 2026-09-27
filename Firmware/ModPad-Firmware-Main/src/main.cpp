@@ -26,8 +26,8 @@ const size_t NUM_BUTTONS = sizeof(buttons) / sizeof(buttons[0]);
 void setup()
 {
     Serial.begin(115200);
-    Wire1.setSDA(6);
-    Wire1.setSCL(7);
+    Wire.setSDA(6);
+    Wire.setSCL(7);
     for (size_t i = 0; i < NUM_BUTTONS; i++)
     {
         pinMode(buttons[i].pin, INPUT_PULLUP);
