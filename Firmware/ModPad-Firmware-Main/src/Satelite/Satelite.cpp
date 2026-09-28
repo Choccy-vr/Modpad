@@ -5,6 +5,7 @@
 #include <Wire.h>
 #include "../Display/Display.h"
 #include "../HID/HID.h"
+#include "../Configurator/Configurator.h"
 namespace ModpadSatelite
 {
 #define INT_PIN 29
@@ -110,6 +111,7 @@ namespace ModpadSatelite
             return false; // nothing pressed
 
         bool encoder = flags & FLAG_ENCODER;
+        ModpadConfigurator::sendPressNotificationJson(name, index, encoder);
         // encoder index packs encoder number and direction
         String event = encoder ? String(name) + " enc " + String(index / 2 + 1) + (index % 2 == 0 ? " CW" : " CCW")
                                : String(name) + " button " + String(index) + " pressed";

@@ -83,6 +83,21 @@ namespace ModpadConfigurator
         Serial.println(F("}}")); // message terminator
     }
 
+    // Sends press notification, index matches the keymap index used by set_key
+    void sendPressNotificationJson(const char *moduleName, uint8_t index, bool encoder)
+    {
+        Serial.print(F("{\"status\":\"press\",\"module\":{"));
+
+        Serial.print(F("\"name\":\""));
+        Serial.print(moduleName);
+        Serial.print(F("\",\"index\":"));
+        Serial.print(index);
+        Serial.print(F(",\"type\":"));
+        Serial.print(encoder ? F("\"encoder\"") : F("\"button\""));
+
+        Serial.println(F("}}")); // message terminator
+    }
+
     // Processes Configurator Command
     void processConfigCommand(const String &payload)
     {

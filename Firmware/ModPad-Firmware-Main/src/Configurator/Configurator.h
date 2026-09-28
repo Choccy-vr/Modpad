@@ -10,6 +10,8 @@ namespace ModpadConfigurator
     void sendAllKeymapsJson();
     // Sends which modules are active
     void sendActiveModulesJson();
+    // Sends press notification
+    void sendPressNotificationJson(const char *moduleName, uint8_t index, bool encoder);
     // Processes Configurator Command
     void processConfigCommand(const String &payload);
     // Non-blocking serial listener
