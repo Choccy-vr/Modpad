@@ -16,21 +16,8 @@ namespace ModpadSatelite
 // max packets drained from a queueing module (Knobs) per poll, matches its queue depth
 #define MAX_PACKETS_PER_POLL 16
 
-    struct KeyAction
-    {
-        uint16_t code;
-        uint8_t modifiers;
-        bool consumer;
-    };
-
-    struct Keymap
-    {
-        const KeyAction *actions;
-        size_t count;
-    };
-
     // Macro module keymap, indexed by the button index the module sends
-    const KeyAction MACRO_KEYMAP[] = {
+    KeyAction MACRO_KEYMAP[] = {
         {HID_USAGE_CONSUMER_VOLUME_INCREMENT, 0, true},
         {HID_USAGE_CONSUMER_VOLUME_DECREMENT, 0, true},
         {HID_KEY_C, 0, false},
@@ -38,17 +25,11 @@ namespace ModpadSatelite
     };
 
     // Knobs module keymap, indexed by encoder * 2 + direction (0 = CW, 1 = CCW)
-    const KeyAction KNOBS_KEYMAP[] = {
+    KeyAction KNOBS_KEYMAP[] = {
         {HID_USAGE_CONSUMER_VOLUME_INCREMENT, 0, true},     // encoder 1 CW
         {HID_USAGE_CONSUMER_VOLUME_DECREMENT, 0, true},     // encoder 1 CCW
         {HID_USAGE_CONSUMER_BRIGHTNESS_INCREMENT, 0, true}, // encoder 2 CW
         {HID_USAGE_CONSUMER_BRIGHTNESS_DECREMENT, 0, true}, // encoder 2 CCW
-    };
-
-    // compare module names by content, not pointer
-    struct NameLess
-    {
-        bool operator()(const char *a, const char *b) const { return strcmp(a, b) < 0; }
     };
 
     std::map<const char *, Keymap, NameLess> MODULE_KEYMAPS = {
@@ -151,7 +132,7 @@ namespace ModpadSatelite
         else
             ModpadHID::tapKey((uint8_t)action.code, action.modifiers);
 
-        // encoder steps can arrive fast, so only mark the display dirty
+        // mark the display dirty if it is a encoder
         if (encoder)
             ModpadDisplay::setText(event);
         else
