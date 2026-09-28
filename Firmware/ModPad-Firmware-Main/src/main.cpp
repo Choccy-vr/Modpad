@@ -2,6 +2,7 @@
 #include <Adafruit_TinyUSB.h>
 #include "HID/HID.h"
 #include "Display/Display.h"
+#include "Satelite/Satelite.h"
 #include <Wire.h>
 const unsigned long DEBOUNCE_MS = 20;
 
@@ -26,8 +27,9 @@ const size_t NUM_BUTTONS = sizeof(buttons) / sizeof(buttons[0]);
 void setup()
 {
     Serial.begin(115200);
-    Wire.setSDA(6);
-    Wire.setSCL(7);
+    Wire1.setSDA(6);
+    Wire1.setSCL(7);
+    Wire1.begin();
     for (size_t i = 0; i < NUM_BUTTONS; i++)
     {
         pinMode(buttons[i].pin, INPUT_PULLUP);
@@ -35,10 +37,14 @@ void setup()
 
     ModpadHID::setup();
     ModpadDisplay::setup();
+    ModpadSatelite::setup();
 }
 
 void loop()
 {
+    ModpadSatelite::checkI2CEvent();
+    ModpadDisplay::update();
+
     unsigned long now = millis();
 
     for (size_t i = 0; i < NUM_BUTTONS; i++)

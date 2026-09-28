@@ -1,6 +1,7 @@
 #include "Satelite.h"
 #include <Adafruit_TinyUSB.h>
 #include <map>
+#include <cstring>
 #include <Wire.h>
 #include "../Display/Display.h"
 #include "../HID/HID.h"
@@ -8,20 +9,62 @@ namespace ModpadSatelite
 {
 #define INT_PIN 29
 
-// satellite packet: [flags, modifiers, code low, code high]
-#define PACKET_SIZE 4
+// satellite packet: [flags, button index]
+#define PACKET_SIZE 2
 #define FLAG_VALID 0x01
-#define FLAG_CONSUMER 0x02
+#define FLAG_ENCODER 0x02 // index = encoder * 2 + direction (0 = CW, 1 = CCW)
+// max packets drained from a queueing module (Knobs) per poll, matches its queue depth
+#define MAX_PACKETS_PER_POLL 16
+
+    struct KeyAction
+    {
+        uint16_t code;
+        uint8_t modifiers;
+        bool consumer;
+    };
+
+    struct Keymap
+    {
+        const KeyAction *actions;
+        size_t count;
+    };
+
+    // Macro module keymap, indexed by the button index the module sends
+    const KeyAction MACRO_KEYMAP[] = {
+        {HID_USAGE_CONSUMER_VOLUME_INCREMENT, 0, true},
+        {HID_USAGE_CONSUMER_VOLUME_DECREMENT, 0, true},
+        {HID_KEY_C, 0, false},
+        {HID_USAGE_CONSUMER_VOLUME_INCREMENT, 0, true},
+    };
+
+    // Knobs module keymap, indexed by encoder * 2 + direction (0 = CW, 1 = CCW)
+    const KeyAction KNOBS_KEYMAP[] = {
+        {HID_USAGE_CONSUMER_VOLUME_INCREMENT, 0, true},     // encoder 1 CW
+        {HID_USAGE_CONSUMER_VOLUME_DECREMENT, 0, true},     // encoder 1 CCW
+        {HID_USAGE_CONSUMER_BRIGHTNESS_INCREMENT, 0, true}, // encoder 2 CW
+        {HID_USAGE_CONSUMER_BRIGHTNESS_DECREMENT, 0, true}, // encoder 2 CCW
+    };
+
+    // compare module names by content, not pointer
+    struct NameLess
+    {
+        bool operator()(const char *a, const char *b) const { return strcmp(a, b) < 0; }
+    };
+
+    std::map<const char *, Keymap, NameLess> MODULE_KEYMAPS = {
+        {"Knobs", {KNOBS_KEYMAP, sizeof(KNOBS_KEYMAP) / sizeof(KNOBS_KEYMAP[0])}},
+        {"Macro", {MACRO_KEYMAP, sizeof(MACRO_KEYMAP) / sizeof(MACRO_KEYMAP[0])}},
+    };
 
     volatile bool i2cEventPending = false;
 
-    std::map<const char *, uint8_t> MODULE_ADDRESSES = {
+    std::map<const char *, uint8_t, NameLess> MODULE_ADDRESSES = {
         {"Knobs", 0x20},
         {"Macro", 0x21},
         {"Slider", 0x22},
     };
 
-    std::map<const char *, bool> ACTIVE_MODULES = {
+    std::map<const char *, bool, NameLess> ACTIVE_MODULES = {
         {"Knobs", false},
         {"Macro", false},
         {"Slider", false},
@@ -36,6 +79,9 @@ namespace ModpadSatelite
     {
         pinMode(INT_PIN, INPUT_PULLUP);
         attachInterrupt(digitalPinToInterrupt(INT_PIN), onIntPin, FALLING);
+
+        if (digitalRead(INT_PIN) == LOW)
+            i2cEventPending = true;
     }
 
     // poll for new i2c modules
@@ -45,8 +91,8 @@ namespace ModpadSatelite
 
         for (auto &[name, addr] : MODULE_ADDRESSES)
         {
-            Wire.beginTransmission(addr);
-            bool present = Wire.endTransmission() == 0;
+            Wire1.beginTransmission(addr);
+            bool present = Wire1.endTransmission() == 0;
 
             if (present && !ACTIVE_MODULES[name])
             {
@@ -64,6 +110,55 @@ namespace ModpadSatelite
 
         return foundNewModule;
     }
+    // read and handle one packet, returns true if it held an event
+    bool readSlavePacket(const char *name, uint8_t addr)
+    {
+        // expects 2 bytes: flags, button index
+        if (Wire1.requestFrom(addr, (uint8_t)PACKET_SIZE) != PACKET_SIZE)
+        {
+            Serial.println("No response from " + String(name));
+            while (Wire1.available())
+                Wire1.read(); // drain partial data
+            return false;
+        }
+
+        uint8_t flags = Wire1.read();
+        uint8_t index = Wire1.read();
+
+        if (!(flags & FLAG_VALID))
+            return false; // nothing pressed
+
+        bool encoder = flags & FLAG_ENCODER;
+        // encoder index packs encoder number and direction
+        String event = encoder ? String(name) + " enc " + String(index / 2 + 1) + (index % 2 == 0 ? " CW" : " CCW")
+                               : String(name) + " button " + String(index) + " pressed";
+
+        if (encoder)
+            Serial.println(event);
+        else
+            Serial.println("Button " + String(index) + " recieved from " + String(name));
+
+        auto keymap = MODULE_KEYMAPS.find(name);
+        if (keymap == MODULE_KEYMAPS.end() || index >= keymap->second.count)
+        {
+            Serial.println("No keymap for " + String(encoder ? "encoder step " : "button ") + String(index) + " on " + String(name));
+            return true;
+        }
+
+        const KeyAction &action = keymap->second.actions[index];
+        if (action.consumer)
+            ModpadHID::tapConsumer(action.code);
+        else
+            ModpadHID::tapKey((uint8_t)action.code, action.modifiers);
+
+        // encoder steps can arrive fast, so only mark the display dirty
+        if (encoder)
+            ModpadDisplay::setText(event);
+        else
+            ModpadDisplay::displayText(event);
+        return true;
+    }
+
     // poll for new i2c data to be recieved
     void searchSlaveData()
     {
@@ -73,30 +168,15 @@ namespace ModpadSatelite
             {
                 continue;
             }
-            // expects 4 bytes: flags, modifiers, code low, code high
-            if (Wire.requestFrom(addr, (uint8_t)PACKET_SIZE) != PACKET_SIZE)
+            bool isKnobs = strcmp(name, "Knobs") == 0;
+            int maxPackets = isKnobs ? MAX_PACKETS_PER_POLL : 1;
+            for (int i = 0; i < maxPackets; i++)
             {
-                Serial.println("No response from " + String(name));
-                while (Wire.available())
-                    Wire.read(); // drain partial data
-                continue;
+                if (!readSlavePacket(name, addr))
+                    break;
+                if (digitalRead(INT_PIN) == HIGH)
+                    break; // all queues empty
             }
-
-            uint8_t flags = Wire.read();
-            uint8_t modifiers = Wire.read();
-            uint16_t code = Wire.read();
-            code |= (uint16_t)Wire.read() << 8;
-
-            if (!(flags & FLAG_VALID))
-                continue; // nothing pressed
-
-            bool consumer = flags & FLAG_CONSUMER;
-            Serial.println("Code " + String(code) + " recieved from " + String(name));
-            if (consumer)
-                ModpadHID::tapConsumer(code);
-            else
-                ModpadHID::tapKey((uint8_t)code, modifiers);
-            ModpadDisplay::displayText(String(code) + " was just pressed");
         }
     }
     void initSateliteModule(String name)
