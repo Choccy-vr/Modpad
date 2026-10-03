@@ -70,6 +70,7 @@ namespace ModpadSatelite
     bool searchNewModule()
     {
         bool foundNewModule = false;
+        bool modulesChanged = false;
 
         for (auto &[name, addr] : MODULE_ADDRESSES)
         {
@@ -80,15 +81,21 @@ namespace ModpadSatelite
             {
                 ACTIVE_MODULES[name] = true;
                 foundNewModule = true;
-                Serial.print("Found " + String(name) + " at address " + String(addr));
+                modulesChanged = true;
+                ModpadConfigurator::sendLogJson("Found " + String(name) + " at address " + String(addr));
                 initSateliteModule(name);
             }
             else if (!present && ACTIVE_MODULES[name])
             {
                 ACTIVE_MODULES[name] = false;
-                Serial.print("Removed " + String(name) + " at address " + String(addr));
+                modulesChanged = true;
+                ModpadConfigurator::sendLogJson("Removed " + String(name) + " at address " + String(addr));
             }
         }
+
+        // push the new module state so the configurator doesn't have to poll
+        if (modulesChanged)
+            ModpadConfigurator::sendActiveModulesJson();
 
         return foundNewModule;
     }
@@ -98,7 +105,7 @@ namespace ModpadSatelite
         // expects 2 bytes: flags, button index
         if (Wire1.requestFrom(addr, (uint8_t)PACKET_SIZE) != PACKET_SIZE)
         {
-            Serial.println("No response from " + String(name));
+            ModpadConfigurator::sendLogJson("No response from " + String(name));
             while (Wire1.available())
                 Wire1.read(); // drain partial data
             return false;
@@ -117,14 +124,14 @@ namespace ModpadSatelite
                                : String(name) + " button " + String(index) + " pressed";
 
         if (encoder)
-            Serial.println(event);
+            ModpadConfigurator::sendLogJson(event);
         else
-            Serial.println("Button " + String(index) + " recieved from " + String(name));
+            ModpadConfigurator::sendLogJson("Button " + String(index) + " recieved from " + String(name));
 
         auto keymap = MODULE_KEYMAPS.find(name);
         if (keymap == MODULE_KEYMAPS.end() || index >= keymap->second.count)
         {
-            Serial.println("No keymap for " + String(encoder ? "encoder step " : "button ") + String(index) + " on " + String(name));
+            ModpadConfigurator::sendLogJson("No keymap for " + String(encoder ? "encoder step " : "button ") + String(index) + " on " + String(name));
             return true;
         }
 

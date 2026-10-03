@@ -98,6 +98,29 @@ namespace ModpadConfigurator
         Serial.println(F("}}")); // message terminator
     }
 
+    // Sends a debug message, keeps the serial stream pure JSON
+    void sendLogJson(const String &msg)
+    {
+        Serial.print(F("{\"status\":\"log\",\"msg\":\""));
+
+        for (size_t i = 0; i < msg.length(); i++)
+        {
+            char c = msg[i];
+            if (c == '"' || c == '\\')
+            {
+                Serial.print('\\');
+                Serial.print(c);
+            }
+            else if ((uint8_t)c >= 0x20)
+            {
+                Serial.print(c);
+            }
+            // control characters are dropped, they would break the JSON
+        }
+
+        Serial.println(F("\"}")); // message terminator
+    }
+
     // Processes Configurator Command
     void processConfigCommand(const String &payload)
     {

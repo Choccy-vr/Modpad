@@ -12,6 +12,8 @@ namespace ModpadConfigurator
     void sendActiveModulesJson();
     // Sends press notification
     void sendPressNotificationJson(const char *moduleName, uint8_t index, bool encoder);
+    // Sends a debug message, keeps the serial stream pure JSON
+    void sendLogJson(const String &msg);
     // Processes Configurator Command
     void processConfigCommand(const String &payload);
     // Non-blocking serial listener

@@ -19,7 +19,6 @@ namespace ModpadHID
     {
         TinyUSBDevice.setProductDescriptor("ModPad");
         usb_hid.begin();
-        Serial.print("TEST");
     }
 
     void tapKey(uint8_t key, uint8_t modifiers)
