@@ -67,7 +67,13 @@ The web configurator and the main module communicate over USB serial (115200 bau
 <img width="1280" height="1272" alt="image" src="https://github.com/user-attachments/assets/011a89b1-1265-46c6-a942-9f26ca3a0bdf" />
 
 
+
+
 #### CAD
+
+  
+<img width="1024" height="768" alt="Modpad_2026-Oct-04_01-32-06AM-000_CustomizedView5351986487" src="https://github.com/user-attachments/assets/721a257f-bdcb-43d1-b9a8-5ff951dfcf75" />
+
 
 ### Knobs Module
 #### Schematic
