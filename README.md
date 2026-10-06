@@ -52,6 +52,8 @@ The web configurator and the main module communicate over USB serial (115200 bau
 
 #### CAD
 
+<img width="1024" height="768" alt="Modpad_2026-Oct-04_01-32-06AM-000_CustomizedView5351986487" src="https://github.com/user-attachments/assets/721a257f-bdcb-43d1-b9a8-5ff951dfcf75" />
+
 ### Macro Module
 #### Schematic
 <img width="1626" height="1117" alt="image" src="https://github.com/user-attachments/assets/87dd841d-4276-4908-b72a-ebd2d2796df8" />
@@ -72,7 +74,9 @@ The web configurator and the main module communicate over USB serial (115200 bau
 #### CAD
 
   
-<img width="1024" height="768" alt="Modpad_2026-Oct-04_01-32-06AM-000_CustomizedView5351986487" src="https://github.com/user-attachments/assets/721a257f-bdcb-43d1-b9a8-5ff951dfcf75" />
+<img width="1024" height="768" alt="b51b9fef-189e-4e89-835a-75f2742f794a" src="https://github.com/user-attachments/assets/7c411465-4020-4204-bea3-73eb1f1581b6" />
+
+
 
 
 ### Knobs Module
