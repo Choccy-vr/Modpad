@@ -551,7 +551,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "knobs_module.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""

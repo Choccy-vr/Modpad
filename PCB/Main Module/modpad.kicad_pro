@@ -540,7 +540,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../../Downloads/modpad.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
