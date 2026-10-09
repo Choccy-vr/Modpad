@@ -1,4 +1,5 @@
 // Message shapes, mirrors ModPad-Firmware-Main/src/Configurator/Configurator.cpp
+import { keyName } from './keycodes'
 
 // One keymap entry as sent by sendAllKeymapsJson()
 export interface KeyAction {
@@ -55,20 +56,9 @@ const CONSUMER_NAMES: Record<number, string> = {
   0xea: 'Volume -',
 }
 
-// Keyboard usage id -> label (HID_KEY_*), letters, digits and a few extras
-function keyboardName(code: number): string | undefined {
-  if (code >= 0x04 && code <= 0x1d) return String.fromCharCode(65 + code - 0x04)
-  if (code >= 0x1e && code <= 0x26) return String(code - 0x1d)
-  if (code === 0x27) return '0'
-  if (code >= 0x3a && code <= 0x45) return `F${code - 0x39}`
-  const extras: Record<number, string> = {
-    0x28: 'Enter',
-    0x29: 'Esc',
-    0x2a: 'Backspace',
-    0x2b: 'Tab',
-    0x2c: 'Space',
-  }
-  return extras[code]
+// Keyboard usage id -> label (HID_KEY_*)
+export function keyboardName(code: number): string | undefined {
+  return keyName(code)
 }
 
 export function describeAction(action: KeyAction): string {

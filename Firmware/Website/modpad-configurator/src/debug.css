@@ -1,4 +1,4 @@
-/* Throwaway test styling */
+/* Throwaway test styling, only loaded by DebugApp (?debug) */
 :root {
   color-scheme: light dark;
   font: 14px/1.4 system-ui, sans-serif;

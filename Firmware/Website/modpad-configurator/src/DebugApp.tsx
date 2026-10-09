@@ -1,6 +1,7 @@
-// Bare-bones test UI for ModpadSerial, not the final configurator
+// Bare-bones test UI for ModpadSerial, served at ?debug
 import { useEffect, useState } from 'react'
 import { type ConnectionState, ModpadSerial } from './modpad/ModpadSerial'
+import './debug.css'
 import { describeAction, type KeyAction, type ModpadMessage } from './modpad/protocol'
 
 interface LogLine {
@@ -20,7 +21,7 @@ interface LastPress {
 const MAX_LOG = 500
 let nextLogId = 0
 
-function App() {
+function DebugApp() {
   const [state, setState] = useState<ConnectionState>('disconnected')
   const [error, setError] = useState<string | null>(null)
   const [modules, setModules] = useState<Record<string, boolean>>({})
@@ -266,4 +267,4 @@ function KeyRow({ index, action, pressed, disabled, onSave }: KeyRowProps) {
   )
 }
 
-export default App
+export default DebugApp
