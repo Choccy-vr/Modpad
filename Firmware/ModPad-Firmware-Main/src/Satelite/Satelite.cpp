@@ -16,6 +16,8 @@ namespace ModpadSatelite
 #define FLAG_ENCODER 0x02 // index = encoder * 2 + direction (0 = CW, 1 = CCW)
 // max packets drained from a queueing module (Knobs) per poll, matches its queue depth
 #define MAX_PACKETS_PER_POLL 16
+// unplugged modules can't pull INT, so presence is also re-checked on this interval
+#define PRESENCE_POLL_MS 250
 
     // Macro module keymap, indexed by the button index the module sends
     KeyAction MACRO_KEYMAP[] = {
@@ -90,6 +92,7 @@ namespace ModpadSatelite
                 ACTIVE_MODULES[name] = false;
                 modulesChanged = true;
                 ModpadConfigurator::sendLogJson("Removed " + String(name) + " at address " + String(addr));
+                ModpadDisplay::displayText(String(name) + " was removed");
             }
         }
 
@@ -173,6 +176,19 @@ namespace ModpadSatelite
     {
         ModpadDisplay::displayText(name + " was just connected!");
     }
+    // re-scan module addresses on a timer, call every loop()
+    void pollModulePresence()
+    {
+        static unsigned long lastPoll = 0;
+        unsigned long now = millis();
+        if (now - lastPoll < PRESENCE_POLL_MS)
+            return;
+        lastPoll = now;
+
+        // pushes a modules message to the configurator if anything changed
+        searchNewModule();
+    }
+
     // check i2c event, call every loop()
     void checkI2CEvent()
     {

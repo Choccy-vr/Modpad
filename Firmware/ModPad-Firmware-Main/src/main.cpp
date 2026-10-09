@@ -21,6 +21,7 @@ void setup()
 void loop()
 {
     ModpadSatelite::checkI2CEvent();
+    ModpadSatelite::pollModulePresence();
     ModpadDisplay::update();
     ModpadConfigurator::processConfiguratorSerial();
 }

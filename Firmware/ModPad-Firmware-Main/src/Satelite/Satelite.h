@@ -40,5 +40,7 @@ namespace ModpadSatelite
     void initSateliteModule(String name);
     // check i2c event
     void checkI2CEvent();
+    // re-scan module addresses on a timer, catches removed modules, call every loop()
+    void pollModulePresence();
 
 }
