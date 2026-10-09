@@ -3,6 +3,8 @@
 
 Modpad combines hardware and software to create an adaptable modular macropad. Rather than locking users in a fixed, rigid layout, keyboard layout, or proprietary config software, Modpad allows users to magnetically hot-swap satellite modules into a main module and reconfigure key actions and layout all in real time.
 
+Configurator URL: https://modpad.vercel.app/
+
 BUILT IMAGE HERE
 ---
 ## Features
