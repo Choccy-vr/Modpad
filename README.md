@@ -39,6 +39,9 @@ The web configurator and the main module communicate over USB serial (115200 bau
 
 ---
 ## Pictures
+### Configurator
+<img width="2256" height="1442" alt="image" src="https://github.com/user-attachments/assets/7c81f89a-336a-482d-b7dd-292a9dcf4ac3" />
+
 ### Main Module
 #### Schematic
 <img width="1480" height="769" alt="image" src="https://github.com/user-attachments/assets/ff6c54dc-ecb7-4723-a2c1-465f6fe69b5c" />
