@@ -4,8 +4,10 @@
 Modpad combines hardware and software to create an adaptable modular macropad. Rather than locking users in a fixed, rigid layout, keyboard layout, or proprietary config software, Modpad allows users to magnetically hot-swap satellite modules into a main module and reconfigure key actions and layout all in real time.
 
 Configurator URL: https://modpad.vercel.app/
+Demo Video: https://youtu.be/VHo8qCPebk0
 
-BUILT IMAGE HERE
+<img width="50%" alt="PXL_20261021_155902831" src="https://github.com/user-attachments/assets/a82db42c-585f-43ed-a609-92cdae473fd4" />
+
 ---
 ## Features
 - **Dynamic Module Discovery:** Automatically identifies and polls attached satellite modules using i2c
@@ -100,4 +102,9 @@ The web configurator and the main module communicate over USB serial (115200 bau
 #### CAD
 
 <img width="1024" height="768" alt="a1f602ed-3c62-45a9-a582-e62301d659ef" src="https://github.com/user-attachments/assets/e3eee76e-d26c-41b8-8864-f64f47262dc1" />
+
+### Built
+<img width="6144" height="8160" alt="PXL_20261021_155902831" src="https://github.com/user-attachments/assets/0c5c4a29-67eb-4936-ba4f-c1268680bfc6" />
+<img width="8160" height="6144" alt="PXL_20261021_155911620" src="https://github.com/user-attachments/assets/1bad28ac-8adb-4312-bde6-534b453b1e60" />
+
 
