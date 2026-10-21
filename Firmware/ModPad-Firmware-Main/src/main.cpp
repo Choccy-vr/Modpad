@@ -9,9 +9,9 @@
 void setup()
 {
     Serial.begin(115200);
-    Wire1.setSDA(6);
-    Wire1.setSCL(7);
-    Wire1.begin();
+    Wire.setSDA(4);
+    Wire.setSCL(5);
+    Wire.begin();
 
     ModpadHID::setup();
     ModpadDisplay::setup();

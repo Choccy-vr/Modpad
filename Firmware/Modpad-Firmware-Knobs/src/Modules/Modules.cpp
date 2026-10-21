@@ -1,12 +1,12 @@
 #include "Modules.h"
-#include <Wire.h>
+#include "SoftI2CSlave.h"
 namespace ModpadModules
 {
 #define I2C_ADDRESS 0x20
-#define SDA_PIN 6
-#define SCL_PIN 7
+#define SDA_PIN PA1
+#define SCL_PIN PA0
 // shared open-drain line, main module listens for FALLING
-#define INT_PIN 29
+#define INT_PIN PA4
 
 // satellite packet: [flags, index]
 #define PACKET_SIZE 2
@@ -23,8 +23,9 @@ namespace ModpadModules
     // open-drain: only ever drive LOW, release to let pullup take it HIGH
     void assertInt()
     {
-        pinMode(INT_PIN, OUTPUT);
+        // latch LOW first so the pin never drives the shared line HIGH
         digitalWrite(INT_PIN, LOW);
+        pinMode(INT_PIN, OUTPUT_OD);
     }
 
     void releaseInt()
@@ -32,9 +33,10 @@ namespace ModpadModules
         pinMode(INT_PIN, INPUT);
     }
 
-    void onRequest()
+    uint8_t onRequest(uint8_t *packet, uint8_t maxLen)
     {
-        uint8_t packet[PACKET_SIZE] = {0, 0}; // flags = 0 means no event
+        packet[0] = 0; // flags = 0 means no event
+        packet[1] = 0;
 
         if (queueHead != queueTail)
         {
@@ -42,20 +44,17 @@ namespace ModpadModules
             queueTail = (queueTail + 1) % QUEUE_SIZE;
         }
 
-        Wire1.write(packet, PACKET_SIZE);
-
         if (queueHead == queueTail)
             releaseInt();
+
+        return PACKET_SIZE;
     }
 
     void setup()
     {
         releaseInt();
 
-        Wire1.setSDA(SDA_PIN);
-        Wire1.setSCL(SCL_PIN);
-        Wire1.begin(I2C_ADDRESS);
-        Wire1.onRequest(onRequest);
+        SoftI2CSlave::begin(I2C_ADDRESS, SCL_PIN, SDA_PIN, onRequest);
 
         syncModule();
     }

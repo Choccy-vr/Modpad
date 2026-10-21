@@ -8,7 +8,7 @@
 #include "../Configurator/Configurator.h"
 namespace ModpadSatelite
 {
-#define INT_PIN 29
+#define INT_PIN 6
 
 // satellite packet: [flags, button index]
 #define PACKET_SIZE 2
@@ -21,10 +21,12 @@ namespace ModpadSatelite
 
     // Macro module keymap, indexed by the button index the module sends
     KeyAction MACRO_KEYMAP[] = {
-        {HID_USAGE_CONSUMER_VOLUME_INCREMENT, 0, true},
-        {HID_USAGE_CONSUMER_VOLUME_DECREMENT, 0, true},
-        {HID_KEY_C, 0, false},
-        {HID_USAGE_CONSUMER_VOLUME_INCREMENT, 0, true},
+        {HID_USAGE_CONSUMER_VOLUME_INCREMENT, 0, true}, // SW1
+        {HID_USAGE_CONSUMER_VOLUME_DECREMENT, 0, true}, // SW2
+        {HID_KEY_C, 0, false},                          // SW3
+        {HID_USAGE_CONSUMER_VOLUME_INCREMENT, 0, true}, // SW4
+        {HID_USAGE_CONSUMER_MUTE, 0, true},             // SW5
+        {HID_USAGE_CONSUMER_PLAY_PAUSE, 0, true},       // SW6
     };
 
     // Knobs module keymap, indexed by encoder * 2 + direction (0 = CW, 1 = CCW)
@@ -76,8 +78,8 @@ namespace ModpadSatelite
 
         for (auto &[name, addr] : MODULE_ADDRESSES)
         {
-            Wire1.beginTransmission(addr);
-            bool present = Wire1.endTransmission() == 0;
+            Wire.beginTransmission(addr);
+            bool present = Wire.endTransmission() == 0;
 
             if (present && !ACTIVE_MODULES[name])
             {
@@ -106,16 +108,16 @@ namespace ModpadSatelite
     bool readSlavePacket(const char *name, uint8_t addr)
     {
         // expects 2 bytes: flags, button index
-        if (Wire1.requestFrom(addr, (uint8_t)PACKET_SIZE) != PACKET_SIZE)
+        if (Wire.requestFrom(addr, (uint8_t)PACKET_SIZE) != PACKET_SIZE)
         {
             ModpadConfigurator::sendLogJson("No response from " + String(name));
-            while (Wire1.available())
-                Wire1.read(); // drain partial data
+            while (Wire.available())
+                Wire.read(); // drain partial data
             return false;
         }
 
-        uint8_t flags = Wire1.read();
-        uint8_t index = Wire1.read();
+        uint8_t flags = Wire.read();
+        uint8_t index = Wire.read();
 
         if (!(flags & FLAG_VALID))
             return false; // nothing pressed

@@ -10,6 +10,8 @@ struct Encoder
     bool reversed;
     uint8_t lastState;
     int8_t accum;
+    // last single-step direction, used to fill in a missed state
+    int8_t lastDir;
 };
 
 namespace ModpadModules

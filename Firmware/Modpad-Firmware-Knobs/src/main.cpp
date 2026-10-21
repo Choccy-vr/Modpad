@@ -3,8 +3,8 @@
 
 // index in this array is the encoder id sent to the main module
 Encoder encoders[] = {
-    {1, 2, false, 0, 0},
-    {3, 27, false, 0, 0},
+    {PA7, PB1, false, 0, 0, 0}, // SW1
+    {PA5, PA6, false, 0, 0, 0}, // SW2
 };
 const size_t NUM_ENCODERS = sizeof(encoders) / sizeof(encoders[0]);
 
@@ -38,7 +38,15 @@ void loop()
     if (state == e.lastState)
       continue;
 
-    e.accum += QUAD_TABLE[(e.lastState << 2) | state];
+    int8_t delta = QUAD_TABLE[(e.lastState << 2) | state];
+    // both pins changed at once: a state went by while the I2C interrupt held the CPU,
+    // so count it as two steps the way the knob was already turning
+    if (delta == 0)
+      delta = 2 * e.lastDir;
+    else
+      e.lastDir = delta;
+
+    e.accum += delta;
     e.lastState = state;
 
     // only count a step once the knob settles in a detent
@@ -50,6 +58,13 @@ void loop()
         ModpadModules::stepEncoder(i, cw ? 0 : 1);
       }
       e.accum = 0;
+    }
+    // a whole detent went by without the detent state itself being seen
+    else if (e.accum >= 4 || e.accum <= -4)
+    {
+      bool cw = (e.accum > 0) != e.reversed;
+      ModpadModules::stepEncoder(i, cw ? 0 : 1);
+      e.accum -= e.accum > 0 ? 4 : -4;
     }
   }
 }

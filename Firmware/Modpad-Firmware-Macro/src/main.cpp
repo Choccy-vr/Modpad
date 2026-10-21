@@ -4,10 +4,12 @@ const unsigned long DEBOUNCE_MS = 20;
 
 // index in this array is the button id sent to the main module
 Button buttons[] = {
-    {1, HIGH, false, 0},
-    {2, HIGH, false, 0},
-    {4, HIGH, false, 0},
-    {3, HIGH, false, 0},
+    {PA11, HIGH, false, 0}, // SW1
+    {PA7, HIGH, false, 0},  // SW2
+    {PA5, HIGH, false, 0},  // SW3
+    {PA12, HIGH, false, 0}, // SW4
+    {PB1, HIGH, false, 0},  // SW5
+    {PA6, HIGH, false, 0},  // SW6
 };
 const size_t NUM_BUTTONS = sizeof(buttons) / sizeof(buttons[0]);
 
